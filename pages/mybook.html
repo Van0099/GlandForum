@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gland Forum | My book</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="mybook.css">
+    <script>
+        window.onload = function () {
+            document.getElementById('download-form').addEventListener('submit', function (evt) {
+                evt.preventDefault();
+                const formData = new FormData(evt.currentTarget);
+                const value = formData.get("link")
+                console.log('LINK ===', value)
+                window.open(value)
+                // const link = document.createElement('a');
+                // link.setAttribute('download', value);
+                // link.href = value;
+                // document.body.appendChild(link);
+                // link.click();
+            })
+        }
+    </script>
+    <link rel="icon" href="G-F-favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">
+                <img src="VanStudioLogo.png" alt="Gland" width="150px">
+            </div>
+            <div class="onas-link">
+                <a href="index.html" class="a">Главная</a>
+            </div>
+            <div class="vgd-link">
+                <a href="download.html" class="a">Cтраница скачиваний</a>
+            </div>
+        </div>
+    </header>
+    <div class="mybook-2">
+        <div class="mybook-zagolov-2">
+            My book
+        </div>
+        <div class="mybook-descreption-2">
+            <p>My book - это достаточно удобное приложение 2 in 1.</p>
+            <p>С помощью My book можно удобно создавать документы,</p>
+            <p>CSharp скрипты.</p>
+            <p>На данный момент актуальная версия: 8.0</p>
+        </div>
+    </div>
+    <div class="version">
+        <div style="display: flex; flex-direction: column;">
+            <p id="download">Скачка</p>
+            <p>Какую версию выбрать?</p>
+        </div>
+        <form id="download-form" style="margin: 80px;">
+            <select class="select" name="link" form="download-form">
+              <option disabled>Выберите версию My book</option>
+              <option value="download_files\My book 8X Technical Preview 4.zip">8X Technical Preview 4</option>
+              <option value="download_files\My book 8X Technical Preview 3.zip">8X Technical Preview 3</option>
+            </select>
+            <input type="submit" title="Скачать">
+        </form>
+    </div>
+    <div class="info">
+        <div class="infotext">
+            <h2 style="color: black;">ᴍʏ ʙᴏᴏᴋ</h2>
+            <p style="width: 800px;">My book - это удивительный редактор текста, разработанный на основе передовой технологии Windows Presentation Foundation (WPF). Он предлагает пользователю широкий спектр функций и возможностей, которые помогут вам создавать и редактировать тексты с легкостью и эффективностью. Благодаря использованию WPF, My book обладает превосходной графикой и интерфейсом, который позволяет вам наслаждаться комфортным и интуитивно понятным пользовательским опытом.
+
+            Кроме того, My book предлагает удобную мобильную версию, которая позволяет вам работать с вашими текстами в любое время и в любом месте. Благодаря этому, вы можете быть уверены, что ваша работа всегда будет под рукой, даже когда вы находитесь в пути или находитесь вдали от своего компьютера.
+            
+            Наш редактор текста также предлагает множество интеллектуальных функций, которые помогут вам повысить вашу продуктивность и качество работы.
+            
+            Кроме того, My book предлагает широкий выбор стилей и шаблонов форматирования, которые помогут вам создавать профессионально оформленные документы. Вы можете выбрать из различных шрифтов, размеров и цветов текста, а также настроить отступы, выравнивание и многое другое. Это позволяет вам создавать тексты, которые выглядят стильно и профессионально, без необходимости быть экспертом в дизайне.
+            
+            В целом, My book - это надежный и мощный редактор текста, который поможет вам достичь высоких результатов в вашей работе с текстами. Благодаря его передовым технологиям и удобным функциям, вы сможете создавать и редактировать тексты с легкостью и эффективностью, сохраняя при этом профессиональный вид и качество. </p>
+        </div>
+        <img src="https://cdn-ru.bitrix24.ru/b25532518/landing/184/184e87e71b8a0d801adffc148a044175/my_book_mobile_and_my_book_1x.png" width="550" height="350">
+    </div>
+    <hr color="#283747" width="50%">
+</body>
+</html>
